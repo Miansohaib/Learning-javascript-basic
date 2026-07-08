@@ -29,6 +29,8 @@ const myarr2 = [1,2,3,4,5,6,7,8,9];
 const newarr2 = myarr2.slice(2,5);
 console.log(newarr2);
 
+//splice can change the orignal array and slice can not chane the array
+
 const newarr3 = myarr2.splice(2,5);
 
 console.log(newarr2);
