@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Weclome</h3>
+    <ul id ="gallery">
+    <li><img src="images/pexels-david-sams-2162820829-38499274.jpg" alt="Image 1" id="img1"></li>
+    <li><img src="images/pexels-fotodruk-38464183.jpg" alt="Image 2" id="img2"></li>
+    <li><img src="images/pexels-jie-feng-1982896588-38578589.jpg" alt="Image 3" id="img3"></li>
+    <li><img src="images/pexels-lefrancois-38597697.jpg" alt="Image 4" id="img4" ></li>
+</ul>
+</body>
+<script>  // not good way
+    // document.getElementById('img2').onclick = function (e) {
+    //     alert('img 2 clicked')
+        
+    // }
+
+// good apporach
+    // document.getElementById('img2').addEventListener('click',function (e) {
+    //     alert('clicked');
+        
+    // });
+
+    // document.getElementById('gallery').addEventListener('click',function (e) {
+    // console.log('inside the ul');
+    
+    // },false);
+
+
+    // document.getElementById('img2').addEventListener('click',function (e) {
+    // console.log('img2 clicked');
+    // e.stopPropagation();
+    // },false);
+
+
+    document.querySelector('#gallery').addEventListener('click' , function (e) {
+        console.log(e.target.parentNode);
+
+        if (e.target.tagName = 'IMG') {
+        console.log(e.target.id);
+            
+        let removeit = e.target.parentNode;
+        removeit.remove();    
+        }
+        
+        
+        
+    })
+
+</script>
+</html>
